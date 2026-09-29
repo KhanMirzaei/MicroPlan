@@ -2,7 +2,7 @@
 
 Plan microbiome sample processing before laboratory work begins. MicroPlan produces randomized, batch-balanced sample sheets, checks the declared study design for confounding and insufficient independent replication, and documents capacity, costs and sample-loss scenarios.
 
-**Version 0.1.0 is a research prototype.** Name availability has not been checked. It supports 16S, ITS and shotgun study-planning contexts. It does not analyse abundance tables or estimate statistical power.
+**Version 0.1.0 is a research prototype.** It supports 16S, ITS and shotgun study-planning contexts. It does not analyse abundance tables or estimate statistical power.
 
 ## Install
 
