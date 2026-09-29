@@ -1,0 +1,24 @@
+{
+  "study_name": "Synthetic two-group longitudinal microbiome study",
+  "samples": "samples.csv",
+  "experimental_unit": "subject_id",
+  "assay": "16s",
+  "endpoint": "community",
+  "balance_columns": ["group", "timepoint"],
+  "seed": 42,
+  "search_restarts": 100,
+  "stages": {
+    "extraction": {
+      "batches": [{"id": "E1", "capacity": 12}, {"id": "E2", "capacity": 12}, {"id": "E3", "capacity": 12}],
+      "controls_per_batch": {"extraction_blank": 1, "mock_community": 1},
+      "keep_unit_together": true
+    },
+    "sequencing": {
+      "batches": [{"id": "S1", "capacity": 20}, {"id": "S2", "capacity": 20}],
+      "controls_per_batch": {"library_blank": 1},
+      "keep_unit_together": true
+    }
+  },
+  "loss_scenarios": {"unit_loss_rates": [0, 0.1, 0.2], "sample_failure_rate": 0.05, "simulations": 500},
+  "budget": {"currency": "EUR", "limit": 2500, "per_unit": 40, "per_specimen": 5, "per_extraction": 12, "per_library": 35}
+}
